@@ -19,7 +19,7 @@ request.onload = function () {
       card.setAttribute('class', 'card')
 
       const h1 = document.createElement('h1')
-      h1.textContent = data.datetime
+      h1.textContent = datetime
 
       
 }
