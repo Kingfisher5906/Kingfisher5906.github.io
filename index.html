@@ -2,10 +2,10 @@
 <html>
 <body>
 
-<h1>PokeMon Search API</h1>
+<h1>API Testing</h1>
 
 <input id="text" type="text" value="" style="Width:20%"/> 
-  <button>Find PokeMon By Name</button>
+  <button>Example Button</button>
 
 <p>Results</p>   
   <ul>
@@ -13,24 +13,14 @@
   </ul>
   
   <script type="text/javascript">
-    fetch('http://worldtimeapi.org/api/timezone/America/Argentina/Salta') 
-.then(response => { 
-	if (true) { 
-	return response.json(); // Parse the response data as JSON 
-	} else { 
-	throw new Error('API request failed'); 
-	} 
-}) 
-.then(data => { 
-	// Process the response data here 
+    var response = await fetch('http://worldtimeapi.org/api/timezone/America/Argentina/Salta') 
+
+	var parsed = response.json(); // Parse the response data as JSON 
+
+	parsed = JSON.parse(parsed);
+
     document.getElementById("p1").innerHTML = "success";
-	console.log(data); // Example: Logging the data to the console 
-}) 
-.catch(error => { 
-	// Handle any errors here 
-    //document.getElementById("p1").innerHTML = error;
-	console.error(error); // Example: Logging the error to the console 
-});
+
 
   
     
