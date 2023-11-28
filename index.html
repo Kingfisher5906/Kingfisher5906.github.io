@@ -9,17 +9,17 @@
 
 <p>Results</p>   
   <ul>
-    <li id="p1">======</li>
+    <li id="p1">==§§§§§====</li>
   </ul>
   
   <script type="text/javascript">
-    var apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto/';
+    var apiUrl = 'http://worldtimeapi.org/api/timezone/America/Argentina/Salta';
     fetch(apiUrl).then(response => {
       return response.json();
     }).then(data => {
       // Work with JSON data here
         var jsonData = JSON.parse(data);
-        document.getElementById("p1").innerHTML = (jsonData.datetime);
+        document.getElementById("p1").innerHTML = jsonData.datetime;
       console.log(data);
     }).catch(err => {
       // Do something for an error here
