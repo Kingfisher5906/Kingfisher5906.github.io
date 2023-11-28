@@ -10,7 +10,7 @@ app.appendChild(logo)
 app.appendChild(container)
 
 var request = new XMLHttpRequest()
-request.open('GET', 'https://www.googleapis.com/books/v1/users/userId/bookshelves/shelf', true)
+request.open('GET', 'https://www.googleapis.com/books/v1/users/userId/bookshelves/1', true)
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
