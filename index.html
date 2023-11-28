@@ -9,14 +9,29 @@
 
 <p>Results</p>   
   <ul>
-    <li id="p1">==32===</li>
+    <li id="p1">==33===</li>
   </ul>
   
   <script type="text/javascript">
-    var apiResponse = await fetch("http://worldtimeapi.org/api/timezone/America/Argentina/Salta");
-    var json = await apiResponse.json(); // This is also a promise so must also wait for it
-    var parsed = JSON.parse(json);
-    document.getElementById("p1").innerHTML = parsed;
+    fetch('Api_address') 
+.then(response => { 
+	if (response.ok) { 
+	return response.json(); // Parse the response data as JSON 
+	} else { 
+	throw new Error('API request failed'); 
+	} 
+}) 
+.then(data => { 
+	// Process the response data here 
+    document.getElementById("p1").innerHTML = data.datetime;
+	console.log(data); // Example: Logging the data to the console 
+}) 
+.catch(error => { 
+	// Handle any errors here 
+	console.error(error); // Example: Logging the error to the console 
+});
+
+  
     
 </script>
 
