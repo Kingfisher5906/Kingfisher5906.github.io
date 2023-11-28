@@ -4,7 +4,12 @@
 			const url = "https://timeapi.io/api/Time/current/zone?timeZone=Europe/Amsterdam";
 
 			async function makeAPICall() {
-				const result = await fetch(URL, accept)
+				const result = await fetch(url, {
+					headers: {
+						'accept: application/json'
+					}
+					})
+				
 				result.json().then(data => {
 					console.log(data)
 				})
