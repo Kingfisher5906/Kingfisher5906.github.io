@@ -1,22 +1,16 @@
 <html>
 	<head>
 		<script>
-			const url = "https://timeapi.io/api/Time/current/zone?timeZone=Europe/Amsterdam";
-
-			async function makeAPICall() {
-				const result = await fetch('https://famous-quotes4.p.rapidapi.com/random?category=all&count=2', {
-					method: 'GET',
-					headers: {
-						'accept: application/json',
-					},
-				})
+			async function APIReq() {
 				
-				result.json().then(data => {
-					console.log(data)
-				})
+			var request = await fetch('https://catfact.ninja/fact', {
+			  headers: {
+			    'accept': 'application/json',
+			    'X-CSRF-TOKEN': 'W9T615hsWeasx5Rubfmv1UtA9npSJXW2Yv4GHKrV'
+			  }
+			});
+			console.log(request)
 			}
-				makeAPICall()
-				
 			
 		</script>
 	</head>
