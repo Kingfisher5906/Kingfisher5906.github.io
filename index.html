@@ -4,7 +4,7 @@
 			const url = "http://worldtimeapi.org/api/timezone/America/Argentina/Salta";
 
 			async function makeAPICall() {
-				const result = await fetch(url);
+				const result = await fetch(url)
 				result.json().then(data => {
 					console.lot(data)
 				})
