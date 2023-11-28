@@ -4,7 +4,11 @@
 
 <h1>PokeMon Search API</h1>
 
-<p id="p1">NOT CHANGED</p>
+<input id="text" type="text" value="" style="Width:20%"/> 
+  <button>Find PokeMon By Name</button>
+
+<p>Results</p>   
+  <p id="p1">X</p>
   
   <script type="text/javascript">
     var apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto/';
@@ -12,18 +16,14 @@
       return response.json();
     }).then(data => {
       // Work with JSON data here
-        document.getElementById("p1").innerHTML = "New text!";
+        document.getElementById("p1").innerHTML = data;
       console.log(data);
     }).catch(err => {
       // Do something for an error here
     });
 </script>
 
-<input id="text" type="text" value="" style="Width:20%"/> 
-  <button>Find PokeMon By Name</button>
 
-<p>Results</p>   
-  <div v-html="link.FUNCTIONVARIABLE"></div>
 
 </body>
 </html>
