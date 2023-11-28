@@ -1,19 +1,17 @@
 <html>
 	<head>
 		<script>
-			async function APIReq() {
-				
-			var request = await fetch('https://catfact.ninja/fact.json', {
-			  headers: {
-			    'accept': 'application/json',
-			    'X-CSRF-TOKEN': 'W9T615hsWeasx5Rubfmv1UtA9npSJXW2Yv4GHKrV'
-			  }
-			})
-			//const parse = request.json()
-			
-			console.log(request)
-			}
-			APIReq()
+		let xhr = new XMLHttpRequest();
+		xhr.withCredentials = true;
+		xhr.open('GET', 'https://catfact.ninja/fact');
+		xhr.setRequestHeader('accept', 'application/json');
+		xhr.setRequestHeader('X-CSRF-TOKEN', 'W9T615hsWeasx5Rubfmv1UtA9npSJXW2Yv4GHKrV');
+
+		xhr.onload = function() {
+		  console.log(xhr.response);
+		};
+
+		xhr.send();
 
 			
 			
