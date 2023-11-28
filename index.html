@@ -18,8 +18,8 @@
       return response.json();
     }).then(data => {
       // Work with JSON data here
-        var jsonData = JSON.parse(data);
-        document.getElementById("p1").innerHTML = jsonData.datetime;
+        const obj = JSON.parse(data);
+        document.getElementById("p1").innerHTML = obj.datetime;
       console.log(data);
     }).catch(err => {
       // Do something for an error here
