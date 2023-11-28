@@ -9,7 +9,7 @@
 
 <p>Results</p>   
   <ul>
-    <li id="p1">==33===</li>
+    <li id="p1">==34===</li>
   </ul>
   
   <script type="text/javascript">
@@ -28,6 +28,7 @@
 }) 
 .catch(error => { 
 	// Handle any errors here 
+    document.getElementById("p1").innerHTML = error;
 	console.error(error); // Example: Logging the error to the console 
 });
 
