@@ -9,11 +9,11 @@
 
 <p>Results</p>   
   <ul>
-    <li id="p1">==36===</li>
+    <li id="p1">==37===</li>
   </ul>
   
   <script type="text/javascript">
-	  document.getElementById("p1").innerHTML = "Part 1";
+	document.getElementById("p1").innerHTML = "Part 1";
 	var response = await fetch('http://worldtimeapi.org/api/timezone/America/Argentina/Salta');
 	var parsed = response.json(); // Parse the response data as JSON 
 	document.getElementById("p1").innerHTML = "success";
