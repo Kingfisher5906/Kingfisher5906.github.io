@@ -9,7 +9,7 @@
 
 <p>Results</p>   
   <ul>
-    <li id="p1">=######=</li>
+    <li id="p1">======</li>
   </ul>
   
   <script type="text/javascript">
@@ -18,7 +18,7 @@
       return response.json();
     }).then(data => {
       // Work with JSON data here
-        document.getElementById("p1").innerHTML = datetime;
+        document.getElementById("p1").innerHTML = datetime.data;
       console.log(data);
     }).catch(err => {
       // Do something for an error here
