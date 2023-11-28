@@ -13,19 +13,10 @@
   </ul>
   
   <script type="text/javascript">
-    var apiUrl = 'http://worldtimeapi.org/api/timezone/America/Argentina/Salta';
-    fetch(apiUrl).then(response => {
-      return response.json();
-    }).then(data => {
-      // Work with JSON data here
-        //const obj = JSON.parse(data);
-        //document.getElementById("p1").innerHTML = obj.datetime;
-        document.getElementById("p1").innerHTML = "TEST";
-      console.log(data);
-    }).catch(err => {
-      // Do something for an error here
-        document.getElementById("p1").innerHTML = "ERROR";
-    });
+    var apiResponse = await fetch("https://www.anapioficeandfire.com/api/characters/124");
+    var json = await apiResponse.json(); // This is also a promise so must also wait for it
+    document.getElementById("p1").innerHTML = json.datetime;
+    
 </script>
 
 
