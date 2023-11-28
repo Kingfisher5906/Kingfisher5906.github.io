@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html>
+<body>
 
-    <title>SJP SchedGen [ALPHA BUILD]</title>
+<h1>PokeMon Search API</h1>
+  
+  <script type="text/javascript">
+    var apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto/';
+    fetch(apiUrl).then(response => {
+      return response.json();
+    }).then(data => {
+      // Work with JSON data here
+      console.log(data);
+    }).catch(err => {
+      // Do something for an error here
+    });
+</script>
 
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-  </head>
+<input id="text" type="text" value="" style="Width:20%"/> 
+  <button>Find PokeMon By Name</button>
 
-  <body>
-    <div id="root"></div>
-    <script src="scripts.js"></script>
-  </body>
+<p>Results</p>   
+  <div v-html="link.FUNCTIONVARIABLE"></div>
+
+</body>
 </html>
