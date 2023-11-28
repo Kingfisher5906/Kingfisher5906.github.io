@@ -10,7 +10,7 @@ app.appendChild(logo)
 app.appendChild(container)
 
 var request = new XMLHttpRequest()
-request.open(GET https://www.googleapis.com/books/v1/users/userId/bookshelves/1)
+request.open('GET' 'http://worldtimeapi.org/api/timezone/America/Argentina/Salta')
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
@@ -19,7 +19,7 @@ request.onload = function () {
       card.setAttribute('class', 'card')
 
       const h1 = document.createElement('h1')
-      h1.textContent = title
+      h1.textContent = data.datetime
 
       
 }
