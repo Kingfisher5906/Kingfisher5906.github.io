@@ -13,20 +13,11 @@
   </ul>
   
   <script type="text/javascript">
-    var response = await fetch('http://worldtimeapi.org/api/timezone/America/Argentina/Salta');
-
+	  document.getElementById("p1").innerHTML = "Part 1";
+	var response = await fetch('http://worldtimeapi.org/api/timezone/America/Argentina/Salta');
 	var parsed = response.json(); // Parse the response data as JSON 
-
-	parsed = JSON.parse(parsed);
-
-    document.getElementById("p1").innerHTML = "success";
-
-
-  
-    
+	document.getElementById("p1").innerHTML = "success";
 </script>
-
-
 
 </body>
 </html>
