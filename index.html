@@ -3,7 +3,7 @@
 		<script>
 			async function APIReq() {
 				
-			var request = await fetch('https://catfact.ninja/fact', {
+			var request = await fetch('https://catfact.ninja/fact.json', {
 			  headers: {
 			    'accept': 'application/json',
 			    'X-CSRF-TOKEN': 'W9T615hsWeasx5Rubfmv1UtA9npSJXW2Yv4GHKrV'
@@ -14,6 +14,8 @@
 			console.log(request)
 			}
 			APIReq()
+
+			
 			
 		</script>
 	</head>
