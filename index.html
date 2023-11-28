@@ -2,21 +2,28 @@
 <html>
 <body>
 
-<h1>API Testing</h1>
+<h1>PokeMon Search API</h1>
 
-<input id="text" type="text" value="" style="Width:20%"/> 
-  <button>Example Button</button>
+	  <input id="text" type="text" value="" style="Width:20%"/> 
+  <button>Find PokeMon By Name</button>
 
 <p>Results</p>   
   <ul>
-    <li id="p1">==38===</li>
+	  <li id="L1">OLD</li>
   </ul>
-  
-  <script>
-	document.getElementById("p1").innerHTML = "Part 1";
-	var response = await fetch('http://worldtimeapi.org/api/timezone/America/Argentina/Salta');
-	var parsed = response.json(); // Parse the response data as JSON 
-	document.getElementById("p1").innerHTML = "success";
+
+
+<script type="text/javascript">
+    var apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto/';
+    fetch(apiUrl).then(response => {
+      return response.json();
+    }).then(data => {
+      // Work with JSON data here
+	    document.getElementById("L1").innerHTML = "NEW";
+      console.log(data);
+    }).catch(err => {
+      // Do something for an error here
+    });
 </script>
 
 </body>
