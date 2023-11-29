@@ -1,18 +1,14 @@
 <html>
 	<head>
+        <h1 id="p1">Loading...</h1>
+        
 		<script>
-		let xhr = new XMLHttpRequest();
-		xhr.withCredentials = true;
-		xhr.open('GET', 'https://catfact.ninja/fact');
-		xhr.setRequestHeader('accept', 'application/json');
-		xhr.setRequestHeader('X-CSRF-TOKEN', 'W9T615hsWeasx5Rubfmv1UtA9npSJXW2Yv4GHKrV');
-
-		xhr.onload = function() {
-		  console.log(xhr.response);
-		};
-
-		xhr.send();
-
+		const req = fetch('https://api.wheretheiss.at/v1/satellites/25544')
+        .then(req => {
+        const js = req.json()
+        })
+        const parse = JSON.parse(js)
+        document.getElementById("p1").textContent = parse.longitude
 			
 			
 		</script>
