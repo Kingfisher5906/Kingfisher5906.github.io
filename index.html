@@ -1,50 +1,8 @@
 <html>
-	<head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
-
-        <h1>International Space Station Location</h1>
-        <h2>Data:</h2>
-    
-            <p id="1">Loading</p>
-            <p id="2">Loading</p>
-            <p id="3">Loading</p>
-            <p id="4">Loading</p>
-            <p id="5">Loading</p>
-
-        
-		<script>
-		const req = fetch('https://api.wheretheiss.at/v1/satellites/25544')
-        .then(res => res.json())
-        .then(set)
-        .catch(error => console.log('ERROR'))
-        function set(data)
-        {
-            console.log(data)
-            document.getElementById("1").textContent = "Name: " + data.name
-            document.getElementById("2").textContent = "Longitude: " + data.longitude
-            document.getElementById("3").textContent = "Latitude: " + data.latitude
-            document.getElementById("4").textContent = "Time Stamp: " + data.timestamp
-            document.getElementById("5").textContent = "Speed: " + data.velocity + " " + data.units + "/Hour"
-        }
-			
-		</script>
-        <style>
-            html{
-                text-align: center;
-                font-family: 'Lato', sans-serif;
-                font-family: 'Poppins', sans-serif;
-		background-image: url("https://cff2.earth.com/uploads/2023/09/27065444/ISS-scaled.jpg");
-		color:white;
-
-            }
-            p{
-                color:white;
-            }
-
-            h1{
-                color:white;
-                text-align: center;
-            }
-        </style>
-	</head>
+    <body>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+        </script>
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+    </body>
 </html>
