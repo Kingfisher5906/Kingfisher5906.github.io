@@ -57,19 +57,14 @@ let errors = ""
         document.getElementById("output").innerHTML = "GPA: " + main(output, goutput)
         //Split errors into an array of errors
         var errorList = errors.split("ERROR")
+        var list = document.getElementById("errorlist")
+        var li = document.createElement("li")
+        li.innerHTML = 'dynamic item'
+        list.appendChild(li);
         
         document.getElementById("output").hidden = false
         document.getElementById("errors").hidden = false
         document.getElementById("errorlist").hidden = false
-        //Create a dynamic amount of list items for how many errors occured.
-            // Generate a dynamic number of inputs based on user input
-            var number = errorList.length
-            // Get input element andnsave to var
-            var container = document.getElementById("errorlist");
-            container.append(document.createElement("li"))
-            for (i=0;i<number;i++){ //Add class fields
-                $( "<li>Test</li>" ).appendTo( ".inner" );
-            }
         //end of dynamic error item list code
         
         
