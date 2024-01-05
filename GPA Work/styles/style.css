@@ -2,6 +2,11 @@ body {
   text-align: center
   background-color: powderblue;
 }
+
+body .top-section h1 {
+  text-align: center
+}
+
 h1 {
   color: blue;
 }
