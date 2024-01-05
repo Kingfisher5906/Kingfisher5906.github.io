@@ -71,7 +71,7 @@ let errors = ""
                 container.removeChild(container.lastChild);
             }
             for (i=0;i<number;i++){ //Add class fields
-                $('<li>Your text</li>').appendTo('#errorlist');
+                $( "<p>Test</p>" ).appendTo( ".inner" );
             }
         //end of dynamic error item list code
         
