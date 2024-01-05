@@ -58,9 +58,13 @@ let errors = ""
         //Split errors into an array of errors
         var errorList = errors.split("ERROR")
         var list = document.getElementById("errorlist")
+        for(var j = 0; j < errorList.length; j++)
+        {
+            
         var li = document.createElement("li")
         li.innerHTML = 'dynamic item'
         list.appendChild(li);
+        }
         
         document.getElementById("output").hidden = false
         document.getElementById("errors").hidden = false
