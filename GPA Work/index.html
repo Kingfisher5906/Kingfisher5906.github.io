@@ -5,7 +5,8 @@
     <body bgcolor="white" text="black">
         <script type = "text/javascript" src="/GPA Work/js/scripts.js"></script>
         <h1>Enter your classes and the coresponding grades below.  </h1>
-
+        <h2>Class levels are determined by the name of the class including one of the following. "CP"," A "," H ", "AP".  If a class does not contain one of these please contact chastings24@ or temporarily add a level indicator to the end of the class name.
+        </h2>
         <form action="/GPA Work//pages/gpa.html">
             <div id="cl">
             </div>
@@ -22,47 +23,43 @@
         <button id="add" onclick="addFields()">AddFields</button>
         <script>
         function addFields(){
-            // Generate a dynamic number of inputs
+            // Generate a dynamic number of inputs based on user input
             var number = document.getElementById("num").value;
-            // Get the element where the inputs will be added to
+            // Get input element andnsave to var
             var container = document.getElementById("cl");
-            // Remove every children it had before
+            // Remove any existing child nodes
             while (container.hasChildNodes()) {
                 container.removeChild(container.lastChild);
             }
-            for (i=0;i<number;i++){
-                // Append a node with a random text
+            for (i=0;i<number;i++){ //Add class fields
+                //Adds rext note that will describe each text field.  i+1 so it starts on 1 not 0
                 container.appendChild(document.createTextNode("Class " + (i+1) + " "));
-                // Create an <input> element, set its type and name attributes
-                container.appendChild(document.createElement("br"))
+                //A br element is appended to create a line break
+                 container.appendChild(document.createElement("br"))
+                //Create class inout field within divider
                 var input = document.createElement("input");
                 input.type = "text";
+                //Each class element is named c1,c2,c3,c4,c5...  This line sets their proper names.
                 input.name = "c" + (i + 1);
-                container.appendChild(input);
-                // Append a line break 
+                container.appendChild(input); 
+                //A br element is appended to create a line break
                 container.appendChild(document.createElement("br"));
             }
-            //GENERATE FOR GRADES
-                        // Generate a dynamic number of inputs
                         var number = document.getElementById("num").value;
-            // Get the element where the inputs will be added to
             var container = document.getElementById("gl");
-            // Remove every children it had before
             while (container.hasChildNodes()) {
                 container.removeChild(container.lastChild);
             }
-            for (i=0;i<number;i++){
-                // Append a node with a random text
+            for (i=0;i<number;i++){ //Add Grade fields (same commenting as above but classes replaced with grades and c replaced with g)
                 container.appendChild(document.createTextNode("Grade " + (i+1) + " "));
-                // Create an <input> element, set its type and name attributes
                 container.appendChild(document.createElement("br"))
                 var input = document.createElement("input");
                 input.type = "text";
                 input.name = "g" + (i + 1);
                 container.appendChild(input);
-                // Append a line break 
                 container.appendChild(document.createElement("br"));
             }
+            //show and hide elements for filling out class fields
             document.getElementById("submit").hidden = false
             document.getElementById("add").hidden = true
             document.getElementById("num").hidden = true
