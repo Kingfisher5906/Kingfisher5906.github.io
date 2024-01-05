@@ -1,18 +1,24 @@
 body {
-  text-align: center
+  text-align: center;
   background-color: powderblue;
 }
 
-body .top-section h1 {
-  text-align: center
+body .top-section {
+  text-align: center;
 }
 
-h1 {
+body .top-section h1 {
   color: blue;
 }
-h2 {
+
+body .top-section h2 {
   color: green;
 }
+
+body .forms {
+  justify-content: center;
+}
+
 p {
   color: red;
 }
