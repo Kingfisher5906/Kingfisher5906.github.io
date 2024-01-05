@@ -66,7 +66,7 @@ let errors = ""
             var number = errorList.length
             // Get input element andnsave to var
             var container = document.getElementById("errorlist");
-            
+            container.append("li")
             for (i=0;i<number;i++){ //Add class fields
                 $( "<li>Test</li>" ).appendTo( ".inner" );
             }
