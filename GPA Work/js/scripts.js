@@ -56,14 +56,14 @@ let errors = ""
         //Calculate and display GPA element
         document.getElementById("output").innerHTML = "GPA: " + main(output, goutput)
         //Split errors into an array of errors
-        errors = errors.split("ERROR")
+        var errorList = errors.split("ERROR")
         
         document.getElementById("output").hidden = false
         document.getElementById("errors").hidden = false
         document.getElementById("errorlist").hidden = false
         //Create a dynamic amount of list items for how many errors occured.
             // Generate a dynamic number of inputs based on user input
-            var number = errors.length
+            var number = errorList.length
             // Get input element andnsave to var
             var container = document.getElementById("errorlist");
             // Remove any existing child nodes
@@ -75,10 +75,9 @@ let errors = ""
                 //Create class inout field within divider
                 var input = document.createElement("li");
                 //Each class element is named c1,c2,c3,c4,c5...  This line sets their proper names.
-                input.innerHTML = "Error" + (i + 1) + error[i];
+                input.innerHTML = "Error" + (i + 1) + errorList[i];
                 container.appendChild(input); 
                 //A br element is appended to create a line break
-                container.appendChild(document.createElement("br"));
             }
         //end of dynamic error item list code
         
