@@ -54,7 +54,7 @@ let errors = ""
         if(debug)console.log("DEBUG:Scripts.js:query: Refined grades array to only contain grades omitted: " + goutput)
         //REFINED GRADES
         //Calculate and display GPA element
-        document.getElementById("output").innerHTML = main(output, goutput)
+        document.getElementById("out").innerHTML = "GPA: " + main(output, goutput)
         //Split errors into an array of errors
         errors = errors.split("ERROR")
         //Create a dynamic amount of list items for how many errors occured.
