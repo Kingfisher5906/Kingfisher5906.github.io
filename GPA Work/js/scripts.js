@@ -58,7 +58,7 @@ let errors = ""
         //Split errors into an array of errors
         var errorList = errors.split("ERROR")
         var list = document.getElementById("errorlist")
-        for(var j = 0; j < errorList.length; j++)
+        for(var j = 1; j < errorList.length; j++)
         {
             
         var li = document.createElement("li")
