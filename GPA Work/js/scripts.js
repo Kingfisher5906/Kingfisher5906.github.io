@@ -54,9 +54,13 @@ let errors = ""
         if(debug)console.log("DEBUG:Scripts.js:query: Refined grades array to only contain grades omitted: " + goutput)
         //REFINED GRADES
         //Calculate and display GPA element
-        document.getElementById("out").innerHTML = "GPA: " + main(output, goutput)
+        document.getElementById("output").innerHTML = "GPA: " + main(output, goutput)
         //Split errors into an array of errors
         errors = errors.split("ERROR")
+        
+        document.getElementById("output").hidden = false
+        document.getElementById("errors").hidden = false
+        document.getElementById("errorlist").hidden = false
         //Create a dynamic amount of list items for how many errors occured.
             // Generate a dynamic number of inputs based on user input
             var number = errors.length
@@ -75,14 +79,12 @@ let errors = ""
                 container.appendChild(input); 
                 //A br element is appended to create a line break
                 container.appendChild(document.createElement("br"));
-            
+            }
         //end of dynamic error item list code
         
         
         
-        document.getElementById("output").hidden = false
-        document.getElementById("errors").hidden = false
-        document.getElementById("errorlist").hidden = false
+
     }
 
     function getQueryVariable(variable)
