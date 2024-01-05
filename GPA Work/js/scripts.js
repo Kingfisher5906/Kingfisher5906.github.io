@@ -66,12 +66,9 @@ let errors = ""
             var number = errorList.length
             // Get input element andnsave to var
             var container = document.getElementById("errorlist");
-            // Remove any existing child nodes
-            while (container.hasChildNodes()) {
-                container.removeChild(container.lastChild);
-            }
+            
             for (i=0;i<number;i++){ //Add class fields
-                $( "<p>Test</p>" ).appendTo( ".inner" );
+                $( "<li>Test</li>" ).appendTo( ".inner" );
             }
         //end of dynamic error item list code
         
