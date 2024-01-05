@@ -71,13 +71,7 @@ let errors = ""
                 container.removeChild(container.lastChild);
             }
             for (i=0;i<number;i++){ //Add class fields
-                //Adds rext note that will describe each text field.  i+1 so it starts on 1 not 0
-                //Create class inout field within divider
-                var input = document.createElement("li");
-                //Each class element is named c1,c2,c3,c4,c5...  This line sets their proper names.
-                input.innerHTML = "Error" + (i + 1) + errorList[i];
-                container.appendChild(input); 
-                //A br element is appended to create a line break
+                $('<li>Your text</li>').appendTo('#errorlist');
             }
         //end of dynamic error item list code
         
