@@ -55,10 +55,31 @@ let errors = ""
         //REFINED GRADES
         //Calculate and display GPA element
         document.getElementById("output").innerHTML = main(output, goutput)
-        //Add errors to errorlist element
+        //Split errors into an array of errors
         errors = errors.split("ERROR")
+        //Create a custom amount of list items for how many errors occured.
+            // Generate a dynamic number of inputs based on user input
+            var number = errors.length
+            // Get input element andnsave to var
+            var container = document.getElementById("errorlist");
+            // Remove any existing child nodes
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){ //Add class fields
+                //Adds rext note that will describe each text field.  i+1 so it starts on 1 not 0
+                //Create class inout field within divider
+                var input = document.createElement("li");
+                //Each class element is named c1,c2,c3,c4,c5...  This line sets their proper names.
+                input.innerHTML = "Error" + (i + 1) + error[i];
+                container.appendChild(input); 
+                //A br element is appended to create a line break
+                container.appendChild(document.createElement("br"));
+            
+        //end of dynamic item list code
         
-        document.getElementById("errorlist").innerHTML = errors
+        
+        
         document.getElementById("output").hidden = false
         document.getElementById("errors").hidden = false
         document.getElementById("errorlist").hidden = false
