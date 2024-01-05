@@ -57,7 +57,7 @@ let errors = ""
         document.getElementById("output").innerHTML = main(output, goutput)
         //Split errors into an array of errors
         errors = errors.split("ERROR")
-        //Create a custom amount of list items for how many errors occured.
+        //Create a dynamic amount of list items for how many errors occured.
             // Generate a dynamic number of inputs based on user input
             var number = errors.length
             // Get input element andnsave to var
@@ -76,7 +76,7 @@ let errors = ""
                 //A br element is appended to create a line break
                 container.appendChild(document.createElement("br"));
             
-        //end of dynamic item list code
+        //end of dynamic error item list code
         
         
         
