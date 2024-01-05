@@ -53,10 +53,15 @@ let errors = ""
         }
         if(debug)console.log("DEBUG:Scripts.js:query: Refined grades array to only contain grades omitted: " + goutput)
         //REFINED GRADES
-        document.getElementById("output").innerHTML = main(output, goutput) //Call main GPA function
-        document.getElementById("errors").innerHTML = errors
+        //Calculate and display GPA element
+        document.getElementById("output").innerHTML = main(output, goutput)
+        //Add errors to errorlist element
+        errors = errors.split("ERROR")
+        
+        document.getElementById("errorlist").innerHTML = errors
         document.getElementById("output").hidden = false
         document.getElementById("errors").hidden = false
+        document.getElementById("errorlist").hidden = false
     }
 
     function getQueryVariable(variable)
