@@ -16,7 +16,7 @@ body .top-section h2 {
 }
 
 body .forms {
-  justify-content: center;
+  align-items: center;
 }
 
 p {
