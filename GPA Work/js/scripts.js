@@ -62,7 +62,7 @@ let errors = ""
         {
             
         var li = document.createElement("li")
-        li.innerHTML = 'dynamic item'
+        li.innerHTML = 'ERROR' + errorList[j]
         list.appendChild(li);
         }
         
