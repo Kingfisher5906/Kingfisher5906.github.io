@@ -5,11 +5,11 @@
   </body>
   <script type=text/javascript>
     var search = window.location.search.substring(1)
-    search.split("&")
+    search = search.split("&")
     var user = search[0]
     var pass = search[1]
-    user = user.substring(user.indexOf("=")+1)
-    pass = pass.substring(pass.indexOf("=")+1)
+    user = user.substring(user.indexOf("="))
+    pass = pass.substring(pass.indexOf("="))
     user = decodeURI(user)
     pass = decodeURI(pass)
     document.getElementById("out").innerHTML = user + "____" + pass
