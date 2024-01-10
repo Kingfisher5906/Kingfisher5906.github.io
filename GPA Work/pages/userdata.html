@@ -1,6 +1,6 @@
 <html>
   <body>
-    <pre>
+    <pre id ="out">
       [
     {
         "username" : "BenWeidenaarly51",
@@ -21,20 +21,28 @@
     </pre>
   </body>
   <script>
-    var userdata = [{"username" : "BenWeidenaarly51","password" : "ILoveCS15"},{"username" : "Chastings","password" : "Beens"},{"username" : "Westy251","password" : "152tyseW"},];
-    var userdata = "username = EXuser password = EXpass"
+    
+    var userdata = "username: EXuser password: EXpass"
     var search = window.location.search.substring(1)
     search = search.split("&")
     var user = search[0]
     var pass = search[1]
     user = user.substring(user.indexOf("=")+1)
     pass = pass.substring(pass.indexOf("=")+1)
-    user = decodeURI(user)
-    pass = decodeURI(pass)
-    if(userdata.substring(userdata.indexOf(user),user.length - 1) = user)
+    user = decodeURI(user);
+    pass = decodeURI(pass);
+    console.log(user)
+    console.log(pass)
+    console.log((userdata.indexOf(user)))
+    console.log(userdata)
+	console.log(userdata.substring((userdata.indexOf(user)),(userdata.indexOf(user)) + user.length))
+    if((userdata.substring((userdata.indexOf(user)),(userdata.indexOf(user)) + user.length) == user) && (userdata.substring((userdata.indexOf(user)),(userdata.indexOf(user)) + user.length) == user))
     {
-     
-    document.getElementById("out").innerHTML = "SUCCESS"
+    	document.getElementById("out").innerHTML = "successfully authenticated user"
+    }
+    else
+    {
+    	document.getElementById("out").innerHTML = "failed to authenticate user"
     }
     
   </script>
