@@ -20,4 +20,21 @@
 ]
     </pre>
   </body>
+  <script>
+    userdata = [{"username" : "BenWeidenaarly51","password" : "ILoveCS15"},{"username" : "Chastings","password" : "Beens"},{"username" : "Westy251","password" : "152tyseW"},];
+    var search = window.location.search.substring(1)
+    search = search.split("&")
+    var user = search[0]
+    var pass = search[1]
+    user = user.substring(user.indexOf("=")+1)
+    pass = pass.substring(pass.indexOf("=")+1)
+    user = decodeURI(user)
+    pass = decodeURI(pass)
+    if(userdata.substring(userdata.indexOf(user),user.length - 1) = user)
+    {
+     
+    document.getElementById("out").innerHTML = "SUCCESS"
+    }
+    
+  </script>
 </html>
