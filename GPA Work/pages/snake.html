@@ -26,7 +26,7 @@
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 
-var grid = 16;
+var grid = 5;
 var count = 0;
   
 var snake = {
@@ -41,7 +41,7 @@ var snake = {
   cells: [],
   
   // length of the snake. grows when eating an apple
-  maxCells: 4
+  maxCells: 5
 };
 var apple = {
   x: 320,
@@ -59,7 +59,7 @@ function loop() {
   requestAnimationFrame(loop);
 
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
-  if (++count < 4) {
+  if (++count < 0.001) {
     return;
   }
 
@@ -96,7 +96,7 @@ function loop() {
 
   // draw apple
   context.fillStyle = 'red';
-  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+  context.fillRect(apple.x, apple.y, grid, grid);
 
   // draw snake one cell at a time
   context.fillStyle = 'green';
@@ -107,7 +107,7 @@ function loop() {
 
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
-      snake.maxCells++;
+      snake.maxCells+= 5000;
 
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;
