@@ -2,6 +2,7 @@
 <html>
 <head>
   <title></title>
+  <input type="text">
   <style>
   html, body {
     height: 100%;
@@ -125,8 +126,8 @@ function loop() {
         snake.dx = grid;
         snake.dy = 0;
 
-        apple.x = getRandomInt(0, 25) * grid;
-        apple.y = getRandomInt(0, 25) * grid;
+        apple.x = getRandomInt(0, 50) * grid;
+        apple.y = getRandomInt(0, 50) * grid;
       }
     }
   });
@@ -140,22 +141,22 @@ document.addEventListener('keydown', function(e) {
   // shouldn't let you collide with your own body)
   
   // left arrow key
-  if (e.which === 37 && snake.dx === 0) {
+  if (e.which === 65 && snake.dx === 0) {
     snake.dx = -grid;
     snake.dy = 0;
   }
   // up arrow key
-  else if (e.which === 38 && snake.dy === 0) {
+  else if (e.which === 87 && snake.dy === 0) {
     snake.dy = -grid;
     snake.dx = 0;
   }
   // right arrow key
-  else if (e.which === 39 && snake.dx === 0) {
+  else if (e.which === 68 && snake.dx === 0) {
     snake.dx = grid;
     snake.dy = 0;
   }
   // down arrow key
-  else if (e.which === 40 && snake.dy === 0) {
+  else if (e.which === 83 && snake.dy === 0) {
     snake.dy = grid;
     snake.dx = 0;
   }
