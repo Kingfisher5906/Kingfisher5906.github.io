@@ -3,6 +3,7 @@
     <pre id ="out">
 	Loading
     </pre>
+    <iframe hidden id="rick" width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=oGJHwhFT07NOT2Sq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
   </body>
   <script>
     
@@ -23,10 +24,12 @@
     if((userdata.substring((userdata.indexOf(user)),(userdata.indexOf(user)) + user.length) == user) && (userdata.substring((userdata.indexOf(user)),(userdata.indexOf(user)) + user.length) == user))
     {
     	document.getElementById("out").innerHTML = "successfully authenticated user"
+	document.getElementById("rick").hidden = false
     }
     else
     {
     	document.getElementById("out").innerHTML = "failed to authenticate user"
+	
     }
     
   </script>
