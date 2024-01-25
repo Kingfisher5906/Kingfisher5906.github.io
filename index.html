@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <title>SchedGen Testing</title>
+    </head>
+    <body>
+        <h1 id="h1">Class List</h1>
+        <div id="classDiv">
+            <div>
+                <h2 id="c1"></h2>
+                <p id="p1"></p>
+            </div>
+            <div>
+                <h2 id="c2"></h2>
+                <p id="p2"></p>
+            </div>
+            <div>
+                <h2 id="c3"></h2>
+                <p id="p3"></p>
+            </div>
+            <div>
+                <h2 id="c4"></h2>
+                <p id="p4"></p>
+            </div>
+            <div>
+                <h2 id="c5"></h2>
+                <p id="p5"></p>
+            </div>
+            <div>
+                <h2 id="c6"></h2>
+                <p id="p6"></p>
+            </div>
+            <div>
+                <h2 id="c7"></h2>
+                <p id="p7"></p>
+            </div>
+            <div>
+                <h2 id="c8"></h2>
+                <p id="p8"></p>
+            </div>
+            <div>
+                <h2 id="c9"></h2>
+                <p id="p9"></p>
+            </div>
+            <div>
+                <h2 id="c10"></h2>
+                <p id="p10"></p>
+            </div>
+            <div>
+                <h2 id="c11"></h2>
+                <p id="p11"></p>
+            </div>
+            <div>
+                <h2 id="c12"></h2>
+                <p id="p12"></p>
+            </div>
+            <div>
+                <h2 id="c13"></h2>
+                <p id="p13"></p>
+            </div>
+            <div>
+                <h2 id="c14"></h2>
+                <p id="p14"></p>
+            </div>
+
+        </div>
+
+    </body>
+    <script>
+        
+        
+
+    //////////
+    var myHeaders = new Headers();
+myHeaders.append("Cookie", "__RequestVerificationToken_OnSuite=DUw50gOEKB724ruZUMOkNih7cvDnIsrxDV5sXPCBtfENsG03898F1P-sWJrA7ixHGNvmlukOZiWd0UNbE4WZC19Q79vjeQYqivTrM_uBzq41; __RequestVerificationToken_OnSuite_TokenId=38399901-39eb-4e0d-8c14-4cf247a7e7a0; sd=990121f7-ca9a-4671-bb44-88e32d4022e8; ck=a=+RMOokPN1rM=; bridge=action=create&src=api&xdb=false; persona=student; ASP.NET_SessionId=ljh5yl2jkuvsrilcmdiyfnqp; mp_c7c28944e829e2d63378894603986970_mixpanel=%7B%22distinct_id%22%3A%20%222a4b850a-5d7d-4669-8444-e50166b1c4db%22%2C%22%24device_id%22%3A%20%2218d1e74f217aa1ab-00843aae9f67e9-46504258-1fa400-18d1e74f217aa1ab%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Fstjohnsprep.myschoolapp.com%2Fapp%3FsvcId%3Dedu%26envId%3Dp-6_UZPoj1wEOZQSdYJnhyGw%26bb_id%3D1%22%2C%22%24initial_referring_domain%22%3A%20%22stjohnsprep.myschoolapp.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20%222a4b850a-5d7d-4669-8444-e50166b1c4db%22%7D; s=EoBNLTXHlqnZXvrUZFTCIv+Bmpme29FzycLxl1UGzU0=; userDataSessionID=1c0b3ba7-806f-414e-8c44-66ea2d225550%7C1ae88207-5aef-4bef-96cf-34baa6442e94; AuthSvcToken=p4Xje6W40sC%2BjbSDt9pbrOZxpxOEgtou7Asd1QgkpNnf%2F6bLAi3EoEGCtHYm8BUEyp%2BriomL1Sw6uEbc3GnSIGwskmMzAmR2muj2ohpsiZ%2FMX2qfp7iV8sYqZqg2Vy1Ni8Yln3K0cERvkoD0E%2BNGfcrShiERzFUBcUrQwcfajtMqqazugtaGECdsJIJmuAgxqge%2FA0IpT4PQkljcl9WmCYoEgpZ5MFoyy6cmDLnxLc249uE3XgXdcN4kZO9ZWTp2Y4HeMeeoOXyb3TbppyPaxv9%2FYv0b9xmSv02YDZ%2BVR4p%2Bd%2Bpr1Y9JCTtvt5qB6aQnhK6mpBEKRjl1uIKNKA4VvQ%3D%3D.H4sIAAAAAAAAA51STY%2FaMBCFthJbtlLbc7UShx4b4iQmEKSqpYRvGiCEXcQFOYlJvJvYJk7Kx69vaLi16gHLnoPf85sZz3tVKpU%2BdjiPiIdSwmiXsReCy6Vy6T5HzDBNeVuWhRfiGIn6MY4EQ7zOkkA%2BCFkFoCHnm%2FiYpiQ9yV6ESCxkimJc3O0ITj6rCLqtBkBSw2%2F6EtR1Q2pBCCXcAIquu4oHffeSsVz6cVu%2BnEsi5PsJFuKTFyKREhoIFX4X6TMLqeAJ%2FqNRJPkwEr3Lgy6jO5LE2H%2FjJBkusG%2B3FRCQX5heuq5085AwWqh9vU1NZMlF6254baQQq4ZExPuRaSWbSo%2FuWOJda347ZQGhJkpxVWkCXWkAaIACurcxxQcU%2FROsdpd2f%2BvMJj3LmWvr1cAcWituThaGZy4jQ9I1iY0h5Sct3ti2Zc%2BCljYZzc%2F7xZTGjvM0HPfVBdyaJjdW0SgdDECgHfep4abqLvDO42uWZT6U3Fjbke809VaHhoYd7bbeLOTU3aLho7WMDxagbmSMgfk8yoZSf7Nfb%2Frnp0c48RXeanY7476dZZ3ouPDn68VmMn2ZkoF2VDyrdzXOu8K3JssHS9%2FHp%2FzHGYsQ53WPxQXlsi7xdX7%2BS6%2FUiRAZ9h%2BcMPtSUxu1MaI1FaiwBtQ2VNoaqA1%2BOnd1fOQkd1xBA61aH7t%2F034DCQsvSWADAAA%3D; t=fe37385a-25d4-d6f4-1722-502a2c27de82");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://stjohnsprep.myschoolapp.com/api/datadirect/ParentStudentUserAcademicGroupsGet?userId=4785700&schoolYearLabel=2023%20-%202024&memberLevel=3&persona=2&durationList=129434%2C129435&markingPeriodId=&viewCid=view120&parentViewCid=view63&changeSchoolYearCount=1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+  var json = response
+  
+  ////////
+
+    function data(json)
+    {
+    var name = new Array(json.length)
+    var room = new Array(json.length)
+    var teacher = new Array(json.length)
+    var id = new Array(json.length)
+    var email = new Array(json.length)
+    for(var i = 0; i < json.length; i++)
+    {
+        name[i] = json[i].sectionidentifier;
+        room[i] = json[i].room;
+        teacher[i] = json[i].groupownername;
+        id[i] = json[i].sectionid;
+        email[i] = [i].groupowneremail;
+
+    }
+
+    //-----------OUTPUT-----------
+    for(i = 0; i < name.length; i++)
+    {
+        document.getElementById("c" + (i + 1)).innerHTML = name[i]
+        document.getElementById("p" + (i + 1)).innerHTML = "Teacher: " + teacher[i] + ". <br> Room number: " + room[i] + ".  <br> Tecaher Email: " + email[i] + "."
+
+    
+    }
+}
+
+
+</script>    
+</HTML>
